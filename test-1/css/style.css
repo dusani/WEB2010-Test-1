@@ -1,0 +1,27 @@
+body{
+  height: 100%;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  align-items: center;
+  justify-content: center;
+  transform: translateY(25%);
+}
+
+.row {
+  width: 450px;
+  height: 150px;
+  border: 1px solid black;
+}
+
+.column {
+  float: left; 
+  width: 148px;
+  height: 148px;
+  border: 1px solid black;
+  text-align: center;
+  font-size: 130px;
+}
