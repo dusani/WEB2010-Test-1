@@ -18,10 +18,10 @@ body{
 }
 
 .column {
-  float: left; 
+  float: left;
   width: 148px;
   height: 148px;
   border: 1px solid black;
   text-align: center;
-  font-size: 130px;
+  font-size: 120px;
 }

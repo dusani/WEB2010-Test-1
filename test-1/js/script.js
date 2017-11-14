@@ -30,11 +30,19 @@ class Squares {
     this.addClickHandler(boxes, colors)
   }
 
+  increment(index, colors) {
+    if (arguments.length === 2) {
+    return (index > 12) ? colors[0] : colors[index + 1];
+    } else {
+    return (index > 12) ? 1 : index;
+    }
+  }
+
   changeNumber(i, boxes) {
     console.log("Running changeNumber function");
     for (var a = i; a >= 0; a--) {
-      const b = parseInt(boxes[a].innerText) + 1;
-      boxes[a].innerText = (b > 9) ? 1 : b;
+      const index = parseInt(boxes[a].innerText) + 1;
+      boxes[a].innerText = this.increment(index)
     }
   }
 
@@ -43,7 +51,9 @@ class Squares {
     for (var a = i; a >= 0; a--) {
       let style = window.getComputedStyle(boxes[a]);
       let index = colors.indexOf(style.backgroundColor);
-      boxes[a].style.backgroundColor = (index > 7) ? colors[0] : colors[index + 1];
+      boxes[a].style.backgroundColor = this.increment(index, colors)
+
+      // (index > 7) ? colors[0] : colors[index + 1];
       console.log(boxes[a].style.backgroundColor)
       console.log(style.backgroundColor, index);
     }
