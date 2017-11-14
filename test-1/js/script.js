@@ -52,8 +52,6 @@ class Squares {
       let style = window.getComputedStyle(boxes[a]);
       let index = colors.indexOf(style.backgroundColor);
       boxes[a].style.backgroundColor = this.increment(index, colors)
-
-      // (index > 7) ? colors[0] : colors[index + 1];
       console.log(boxes[a].style.backgroundColor)
       console.log(style.backgroundColor, index);
     }
