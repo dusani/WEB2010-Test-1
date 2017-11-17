@@ -34,7 +34,7 @@ class Squares {
     if (arguments.length === 2) {
     return (index > 12) ? colors[0] : colors[index + 1];
     } else {
-    return (index > 7) ? 1 : index;
+    return (index > 12) ? 1 : index;
     }
   }
 
